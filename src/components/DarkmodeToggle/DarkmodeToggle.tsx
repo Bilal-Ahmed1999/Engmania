@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useContext } from "react";
-import styles from "./darkModeToggle.module.css";
+import styles from './DarkmodeToggle.module.css'
 import { useTheme } from 'next-themes'
 
 
