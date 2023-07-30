@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 
-const Dashboard = () => {
+const Dashboard  = () => {
   const router = useRouter();
   const session = useSession();
   //fetch data
@@ -28,7 +28,7 @@ const Dashboard = () => {
         setErr(true);
       }
 
-      const data = await res.json();
+      const data:any = await res.json();
 
       setData(data);
       setIsLoading(false);
@@ -87,7 +87,7 @@ const Dashboard = () => {
         <div className={styles.posts}>
           {isLoading
             ? "loading"
-            : data?.map((post) => (
+            : data?.map((post:any) => (
                 <div className={styles.post} key={post._id}>
                   <div className={styles.imgContainer}>
                     <Image src={post.img} alt="" width={200} height={100} />
